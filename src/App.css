@@ -1,42 +1,334 @@
-#root {
-  max-width: 1280px;
+:root{
+  --nav-bg: #9b312f;
+  --nav-text: #cdb39c;
+  --page-bg: #feeca4;
+  --footer-bg: #9b312f;
+  --footer-text: #cdb39c;
+  --nav-height: 64px;
+}
+
+/* Base typography — Cream-like font (Lilita One) in black */
+body {
+  margin: 0;
+  background: var(--page-bg);
+  font-family: "Fuzzy Bubbles", cursive, sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+/* App layout */
+.app-shell{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.content{ flex: 1; }
+
+/* ---------- NAVBAR (simple full-width bar) ---------- */
+.nav{
+  width: 100%;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  height: var(--nav-height);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  font-weight: 700;
+}
+
+.nav-inner{
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand{ font-weight: 900; }
+
+.links{
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+.links a{
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 900;
+}
+.links a:hover{ text-decoration: underline; }
+
+
+/* ---------- Home ---------- */
+.home{
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px 32px;             /* no TOP padding */
+  background: var(--page-bg);
+}
+
+.logo-wrap{ position: relative; width: min(520px, 90vw); aspect-ratio: 1/1; }
+.logo-img{ width: 100%; height: 100%; object-fit: contain; display: block; }
+
+
+
+/* Lotus clickable area — remove outline */
+.lotus-hotspot{
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22%;
+  height: 12%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.lotus-hotspot:focus,
+.lotus-hotspot:focus-visible{
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* ---------- Footer (simple full-width bar) ---------- */
+.footer{
+  width: 100%;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+.footer-inner{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 4%;
   text-align: center;
+  font-weight: 800;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+
+
+/* Single continuous shelf */
+.shelf {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 28px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shelf-wood {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 16px; border-radius: 8px;
+  background: linear-gradient(90deg,#9b5a34 0%,#b27040 50%,#9b5a34 100%);
+  box-shadow: 0 6px 0 #6a381e, 0 10px 12px rgba(0,0,0,.25);
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* one row, no wrap; scroll horizontally if needed */
+.shelf-row {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;          /* key */
+  align-items: flex-end;      /* bottoms touch the plank */
+  gap: 14px;
+  overflow-x: auto;           /* horizontal scroll when needed */
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+  z-index: 1;
+}
+.shelf-row > * { scroll-snap-align: end; }
+
+/* polaroids a bit smaller so more fit on one shelf */
+.polaroid {
+  background: #fffdf6;
+  border: 1px solid #e9e1c9;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  padding: 10px;
+  width: clamp(180px, 28vw, 240px); /* smaller than before */
+  transform: rotate(0.3deg);
+  margin: 0;
+}
+.polaroid:nth-child(2n) { transform: rotate(-0.6deg); }
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.polaroid .caption {
+  margin-top: 8px;
+  font-weight: 800;
+  font-family: "Fuzzy Bubbles", cursive;
 }
 
-.card {
-  padding: 2em;
+/* Vietnamese icons */
+.shelf-row .icon {
+  width: 44px; height: 44px;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.18));
 }
 
-.read-the-docs {
-  color: #888;
+/* Hide scrollbar (still scrollable) */
+.shelf-row {
+  overflow-x: auto;
+  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+.shelf-row::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
+}
+:root {
+  /* one place to control card width */
+  --polaroid-w: 220px; /* try 240px if you want bigger */
+}
+
+/* single-row shelf (you already have this; keeping the scrollbar hidden) */
+.shelf-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+  z-index: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.shelf-row::-webkit-scrollbar { display: none; }
+
+/* FIXED width so cards don't shrink on long shelves */
+.polaroid {
+  flex: 0 0 var(--polaroid-w);   /* <- fixed width on every shelf */
+  background: #fffdf6;
+  border: 1px solid #e9e1c9;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  padding: 10px;
+  transform: rotate(0.3deg);
+  margin: 0;
+}
+.polaroid:nth-child(2n) { transform: rotate(-0.6deg); }
+.polaroid .caption {
+  margin-top: 8px;
+  font-weight: 800;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+/* icons keep a fixed size too */
+.shelf-row .icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.18));
+}
+
+/* extra breathing room above shelf if desired */
+.shelf { margin-top: 32px; padding-bottom: 12px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- HERO container (keeps logo under lanterns) ----- */
+.hero{
+  position: absolute;              /* <-- required so .lanterns can be absolute */
+  width: min(520px, 90vw);
+  margin: 0 auto;
+  --lantern-zone: 110px;           /* height of strings+lanterns */
+  --lantern-gap: 22px;             /* space between strings and logo */
+  padding-top: calc(var(--lantern-zone) + var(--lantern-gap));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ----- Lanterns bar (CENTERED across the page) ----- */
+.lanterns{
+  position: absolute;              /* scrolls with content */
+  top: -1px;                        /* tiny overlap into navbar for a perfect join */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(900px, 92vw);
+  height: var(--lantern-zone);
+  display: flex;
+  justify-content: space-between;  /* even spacing; no overlap */
+  align-items: flex-start;
+  gap: clamp(10px, 2.5vw, 22px);
+  pointer-events: none;
+  padding: 0;
+  z-index: 1;                      /* under sticky nav (z-index:10) */
+}
+
+
+/* Each lantern starts above and drops in */
+.lantern{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-160px) scale(var(--scale, 1));
+  animation: lantern-drop 700ms cubic-bezier(.2,.9,.2,1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes lantern-drop{
+  from { transform: translateY(-160px) scale(var(--scale, 1)); opacity: 0; }
+  to   { transform: translateY(0)      scale(var(--scale, 1)); opacity: 1; }
+}
+
+
+.lantern-string{
+  display: block;
+  width: 2px;
+  height: var(--string-len, 40px);
+  background: #9b312f;
+  border-radius: 1px;
+  margin: 0;
+}
+
+
+/* Lantern body */
+.lantern-body {
+  width: 48px;
+  height: auto;
+  fill: #fba45b;
+  stroke-width: 2;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.18));
+  margin-top: -1px;  
+}
+/* Lantern details */
+.lantern-rib{
+  fill: none;
+  stroke: #c75c2e;
+  stroke-width: 2;
+  opacity: .6;
+}
+.lantern-tassel{
+  stroke: #c75c2e;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: .9;
 }
