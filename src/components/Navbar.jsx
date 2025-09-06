@@ -6,9 +6,12 @@ export default function Navbar() {
         <ul className="links">
           <li><a href="/">Home</a></li>
           <li><a href="/events">Past Events</a></li>
-          <li><a href="mailto:princetonvsa@example.org">Contact</a></li>
+          <li><a href="/anh-chi-em">Anh Chi Em</a></li>
+          <li><a href="/contact">About</a></li>
+          
         </ul>
       </div>
     </nav>
   );
 }
+
