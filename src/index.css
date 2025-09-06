@@ -5,8 +5,11 @@ html, body, #root { height: 100%; }
 
 body {
   margin: 0;
-  background: #feeca4;            /* your page background */
+  background: transparent;            /* theme controls background */
 }
+
+/* Prevent body-level horizontal scrolling on mobile */
+html, body { max-width: 100%; overflow-x: hidden; }
 
 /* no global ul/li styles — let App.css control nav */
 ul, li { margin: 0; padding: 0; }
