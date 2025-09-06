@@ -1,14 +1,30 @@
-# React + Vite
+# Princeton VSA Website (Vite + React)
 
-Minimal setup to get React working in Vite with HMR and some ESLint rules.
+Local development requirements and commands for this project.
 
-Currently, two official plugins are available:
+## Prerequisites
+- Node.js 20.19+ (or 22.12+). Use `nvm` with the included `.nvmrc`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+nvm use        # switches to Node 20.19.0
+npm ci         # install deps
+npm run dev    # start Vite dev server
+```
 
-## Expanding the ESLint configuration
+If you see an error from Vite like “Vite requires Node.js version 20.19+ or 22.12+”, upgrade Node:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-test ci
-trigger
+```sh
+nvm install 20.19.0
+nvm use 20.19.0
+```
+
+## Scripts
+- `npm run dev` – start dev server
+- `npm run build` – production build
+- `npm run preview` – preview the production build
+- `npm run lint` – ESLint
+- `npm run format` – Prettier write
+
+## Notes
+- SPA routing is handled by React Router. A fallback `*` route shows a simple 404 page.
+- CI runs on Node 20 and builds with Vite.
