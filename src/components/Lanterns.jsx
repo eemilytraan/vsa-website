@@ -1,6 +1,21 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Lanterns({ count = 9 }) {
+  const [parallax, setParallax] = useState(0);
+  const ticking = useRef(false);
+  useEffect(() => {
+    const onScroll = () => {
+      if (ticking.current) return;
+      ticking.current = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        setParallax(Math.max(-40, -y * 0.15));
+        ticking.current = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const lanterns = useMemo(() => {
     const arr = [];
     for (let i = 0; i < count; i++) {
@@ -14,7 +29,7 @@ export default function Lanterns({ count = 9 }) {
   }, [count]);
 
   return (
-    <div className="lanterns">
+    <div className="lanterns" style={{ "--parallax": `${parallax}px` }}>
       {lanterns.map((l, idx) => (
         <div
           key={idx}

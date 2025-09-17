@@ -77,7 +77,7 @@ function SmartImage({ rawUrl, alt }) {
 
 export default function PastEventsPage() {
   return (
-    <main style={{ maxWidth: 1120, margin: "0 auto", padding: "24px" }}>
+    <main className="container">
       <h1 className="past-title">Past Events</h1>
 
       {PAST_EVENTS.map((block) => {
