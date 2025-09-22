@@ -5,59 +5,70 @@ import { Link } from "react-router-dom";
 import Separator from "../components/Separator";
 import logo from "../assets/princeton-vsa-logo.png";
 
+
 export default function Home() {
   const navigate = useNavigate();
-
   return (
     <main className="home">
+      {" "}
       <section className="hero">
-        <Lanterns count={9} />
+        {" "}
+        <Lanterns count={9} />{" "}
         <div className="hero-inner">
-          <h1 className="hero-title">Princeton Vietnamese Student Association</h1>
-          <p className="hero-subtitle">Culture, community, and good food — come join the family.</p>
+          {" "}
+          <h1 className="hero-title">Princeton Vietnamese Student Association</h1>{" "}
+          <p className="hero-subtitle">Culture, Community, and Good Food — Come Join the Family.</p>{" "}
           <div className="logo-wrap">
+            {" "}
             <img
               src={logo}
               alt="Princeton VSA logo (tiger with nón lá and lotus)"
               className="logo-img"
-            />
+            />{" "}
             <button
               className="lotus-hotspot"
               aria-label="Open Past Events"
               onClick={() => navigate("/events")}
-            />
-          </div>
+            />{" "}
+          </div>{" "}
           <div className="hero-cta">
+            {" "}
             <a
               className="btn btn-primary"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdKnZPdUozY9lAx18F2NVsxCfm-mtMU8_XZZcw_3Ktgn8y8mw/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfgXAMAOitG5BA1VFjbp_cFksMHUnLjhF2OBNy9PjKl4kezjw/viewform?usp=header"
               target="_blank"
               rel="noreferrer"
             >
-              Join Us
-            </a>
-            <button className="btn btn-outline" onClick={() => navigate("/events")}>Explore Events</button>
-          </div>
+              {" "}
+              Join Us{" "}
+            </a>{" "}
+            <button className="btn btn-outline" onClick={() => navigate("/events")}>
+              Explore Events
+            </button>{" "}
+          </div>{" "}
+
           <section className="quick-grid">
+            {" "}
             <Link to="/anh-chi-em" className="card-link">
-              <Sriracha className="icon" />
-              <h3>Mentorship</h3>
-              <p>Find your ACE family on campus.</p>
-            </Link>
+              {" "}
+              <Sriracha className="icon" /> <h3>Mentorship</h3>{" "}
+              <p>Find Your Ace Family on Campus.</p>{" "}
+            </Link>{" "}
             <Link to="/events" className="card-link">
-              <RiceBowl className="icon" />
-              <h3>Events</h3>
-              <p>Food nights, Tết, study breaks, and more.</p>
-            </Link>
+              {" "}
+              <RiceBowl className="icon" /> <h3>Events</h3>{" "}
+              <p>Food Nights, Tết, Study Breaks, and More.</p>{" "}
+            </Link>{" "}
             <Link to="/contact" className="card-link">
-              <CoffeeCup className="icon" />
-              <h3>About VSA</h3>
-              <p>Meet the board and get connected.</p>
-            </Link>
-          </section>
-          <Separator />
-          </div>
-      </section>
+              {" "}
+              <CoffeeCup className="icon" /> <h3>About VSA</h3>{" "}
+              <p>Meet the Board and Get Connected.</p>{" "}
+            </Link>{" "}
+          </section>{" "}
+          
+          <Separator />{" "}
+        </div>{" "}
+      </section>{" "}
     </main>
   );
 }

@@ -7,7 +7,7 @@ export default function Footer() {
         <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
           <a
             className="chip"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdKnZPdUozY9lAx18F2NVsxCfm-mtMU8_XZZcw_3Ktgn8y8mw/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfgXAMAOitG5BA1VFjbp_cFksMHUnLjhF2OBNy9PjKl4kezjw/viewform?usp=header"
             target="_blank" rel="noreferrer"
           >Join Us</a>
           <a className="icon-btn lantern-glow" href="https://www.instagram.com/vsaprinceton/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">

@@ -9,13 +9,13 @@ export default function About() {
         <div>
           <h2 className="section-title">The Board</h2>
           <ul className="list-plain">
-            <li>President: Morgan Hoang '27</li>
-            <li>Vice President: Alina Ho '26</li>
-            <li>Secretary: Bryan Dam '27</li>
-            <li>Treasurer: Emily Tran '28</li>
-            <li>Social Chair: Sabrina Van '26 &amp; Tran Ton '27</li>
-            <li>Publicity Chain: Brandon Le '26 &amp; Dan Le '27</li>
-            <li>Frosh Board Chair: Ethan Do '26 &amp; Lincoln Ho '28</li>
+            <li><strong>President:</strong> Morgan Hoang '27</li>
+            <li><strong>Vice President:</strong> Alina Ho '26</li>
+            <li><strong>Secretary:</strong> Bryan Dam '27</li>
+            <li><strong>Treasurer:</strong> Emily Tran '28</li>
+            <li><strong>Social Chair:</strong> Sabrina Van '26 &amp; Tran Ton '27</li>
+            <li><strong>Publicity Chain:</strong> Brandon Le '26 &amp; Dan Le '27</li>
+            <li><strong>Frosh Board Chair:</strong> Ethan Do '26 &amp; Lincoln Ho '28</li>
           </ul>
         </div>
         <div>
