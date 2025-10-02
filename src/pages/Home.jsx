@@ -14,10 +14,14 @@ export default function Home() {
       <section className="hero">
         {" "}
         <Lanterns count={9} />{" "}
+
+
+        <br />
         <div className="hero-inner">
           {" "}
           <h1 className="hero-title">Princeton Vietnamese Student Association</h1>{" "}
           <p className="hero-subtitle">Culture, Community, and Good Food — Come Join the Family.</p>{" "}
+          <br />
           <div className="logo-wrap">
             {" "}
             <img
@@ -31,6 +35,8 @@ export default function Home() {
               onClick={() => navigate("/events")}
             />{" "}
           </div>{" "}
+
+          <br />
           <div className="hero-cta">
             {" "}
             <a
@@ -47,16 +53,17 @@ export default function Home() {
             </button>{" "}
           </div>{" "}
 
+          <br />
           <section className="quick-grid">
             {" "}
             <Link to="/anh-chi-em" className="card-link">
               {" "}
-              <Sriracha className="icon" /> <h3>Mentorship</h3>{" "}
-              <p>Find Your Ace Family on Campus.</p>{" "}
+              <RiceBowl className="icon" /> <h3>Mentorship</h3>{" "}
+              <p>Find Your ACE Family on Campus.</p>{" "}
             </Link>{" "}
             <Link to="/events" className="card-link">
               {" "}
-              <RiceBowl className="icon" /> <h3>Events</h3>{" "}
+              <Sriracha className="icon" /> <h3>Events</h3>{" "}
               <p>Food Nights, Tết, Study Breaks, and More.</p>{" "}
             </Link>{" "}
             <Link to="/contact" className="card-link">

@@ -1,13 +1,13 @@
 import React from "react";
 import {
   RiceBowl, GuavaCandy, IncenseBowl, FishSauce, RiceCooker,
-  Chopsticks, BanhMi, Sriracha, Hoisin, CoffeeCup, PandanJelly, PlayingCard
+  Chopsticks, BanhMi, Sriracha, Hoisin, CoffeeCup, Che, PlayingCard, BanhTet, BanhRan
 } from "./VietnameseIcons";
 
 export default function Shelf({ photosChildren }) {
   const icons = [
-    Sriracha, Hoisin, CoffeeCup, PandanJelly, PlayingCard,
-    RiceBowl, GuavaCandy, IncenseBowl, FishSauce, RiceCooker, Chopsticks, BanhMi
+    Sriracha, Hoisin, CoffeeCup, Che, PlayingCard,
+    RiceBowl, GuavaCandy, IncenseBowl, FishSauce, RiceCooker, Chopsticks, BanhMi, BanhTet, BanhRan
   ].map((Icon, i) => <Icon key={`ic-${i}`} className="icon" />)
    .sort(() => Math.random() - 0.5);
 
