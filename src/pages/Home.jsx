@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Lanterns from "../components/Lanterns";
-import { Sriracha, RiceBowl, CoffeeCup } from "../components/VietnameseIcons";
+import { Sriracha, RiceBowl, CoffeeCup, RiceCooker } from "../components/VietnameseIcons";
 import { Link } from "react-router-dom";
 import Separator from "../components/Separator";
 import logo from "../assets/princeton-vsa-logo.png";
@@ -58,7 +58,7 @@ export default function Home() {
             {" "}
             <Link to="/anh-chi-em" className="card-link">
               {" "}
-              <RiceBowl className="icon" /> <h3>Mentorship</h3>{" "}
+              <RiceCooker className="icon" /> <h3>Mentorship</h3>{" "}
               <p>Find Your ACE Family on Campus.</p>{" "}
             </Link>{" "}
             <Link to="/events" className="card-link">
