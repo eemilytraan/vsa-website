@@ -51,6 +51,8 @@ h5,
 h6,
 .brand {
   font-family: "Fuzzy Bubbles", cursive, sans-serif;
+  font-weight:6400;
+  font-style: normal;
   color: var(--text);
 } /* page sizing and scroll */
 html,
