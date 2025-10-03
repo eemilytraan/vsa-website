@@ -4,7 +4,7 @@ export type AcademicYearBlock = { academicYear: string; events: PastEvent[] };
 export const PAST_EVENTS: AcademicYearBlock[] = [
   
   { academicYear: "2025-26", events: [
-    { title: "ACE Family", images: ["https://drive.google.com/uc?export=view&id=1-iV9AKRezAwHMJcnoMZ8y-gPy9_8lgfi", "https://drive.google.com/uc?export=view&id=1ykP6d0QJQe9EGU-iiP8CnZXEHnlsjKJH", "https://drive.google.com/uc?export=view&id=1vA0oDHgs_Brv53tS-5Zis3pc1vQ37jib"] },
+    { title: "ACE Family", images: ["https://drive.google.com/uc?export=view&id=1-iV9AKRezAwHMJcnoMZ8y-gPy9_8lgfi", "https://drive.google.com/uc?export=view&id=1ykP6d0QJQe9EGU-iiP8CnZXEHnlsjKJH", "https://drive.google.com/uc?export=view&id=1vA0oDHgs_Brv53tS-5Zis3pc1vQ37jib", "https://drive.google.com/uc?export=view&id=1jxIJPysLano-OfaqM9emxnTS7qmskXfw"] },
   ]},
   { academicYear: "2024-25", events: [
     { title: "VSA Social", images: ["https://drive.google.com/uc?export=view&id=1LYejceJwLUX75n9-D0wHu1e8i3qJ88rP", "https://drive.google.com/uc?export=view&id=1BaytkcU7DOtfXyTDjUKk8e4B3ytnLRxT", "https://drive.google.com/uc?export=view&id=19WvjAVmhvP-wQ_7xNCbiBIB6vrSYQbiM"] },

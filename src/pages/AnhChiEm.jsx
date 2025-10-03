@@ -10,15 +10,16 @@ export default function AnhChiEmPage() {
         <p>
           Our Anh Chi Em program fosters mentorship, friendship, and community within VSA. Members
           are paired into sibling groups that create lasting bonds through shared activities,
-          traditions, and support.
+          traditions, and support. Make sure to join the ACE competition!!
+          {/*} nước sôi, nước sôi, nước sôi; adopted; koalas; */}
         </p>
       </div>
 
       <div className="card" style={{ marginBottom: 24 }}>
         <h2 className="section-title">How It Works</h2>
         <ul style={{ paddingLeft: 24, lineHeight: "1.8em", margin: 0 }}>
-          <li>Littles (general members) are paired with Bigs (Eboard) into a little family.</li>
-          <li>We host small study breaks throughout the semester — yes, there’s boba.</li>
+          <li>Littles ('28s and '29s') are paired with Bigs ('27s and '26s) into a little family.</li>
+          <li>We host small study breaks throughout the semester, and YOU rack up competition points for your family by attending events!</li>
         </ul>
       </div>
 
