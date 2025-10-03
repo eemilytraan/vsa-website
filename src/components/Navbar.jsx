@@ -26,7 +26,7 @@ export default function Navbar() {
         <ul id="primary-navigation" className={`links ${open ? "open" : ""}`}>
           <li>
             <NavLink to="/events" className={({ isActive }) => (isActive ? "active" : undefined)} onClick={close}>
-              Past Events
+              Events
             </NavLink>
           </li>
           <li>

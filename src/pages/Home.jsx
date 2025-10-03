@@ -31,7 +31,7 @@ export default function Home() {
             />{" "}
             <button
               className="lotus-hotspot"
-              aria-label="Open Past Events"
+              aria-label="Open Events"
               onClick={() => navigate("/events")}
             />{" "}
           </div>{" "}

@@ -2,6 +2,10 @@
 export type PastEvent = { title: string; images: string[] };
 export type AcademicYearBlock = { academicYear: string; events: PastEvent[] };
 export const PAST_EVENTS: AcademicYearBlock[] = [
+  
+  { academicYear: "2025-26", events: [
+    { title: "ACE Family", images: ["https://drive.google.com/uc?export=view&id=1-iV9AKRezAwHMJcnoMZ8y-gPy9_8lgfi", "https://drive.google.com/uc?export=view&~id=1ykP6d0QJQe9EGU-iiP8CnZXEHnlsjKJH", "https://drive.google.com/uc?export=view&id=1vA0oDHgs_Brv53tS-5Zis3pc1vQ37jib"] },
+  ]},
   { academicYear: "2024-25", events: [
     { title: "VSA Social", images: ["https://drive.google.com/uc?export=view&id=1LYejceJwLUX75n9-D0wHu1e8i3qJ88rP", "https://drive.google.com/uc?export=view&id=1BaytkcU7DOtfXyTDjUKk8e4B3ytnLRxT", "https://drive.google.com/uc?export=view&id=19WvjAVmhvP-wQ_7xNCbiBIB6vrSYQbiM"] },
     { title: "Spring Rolls", images: ["https://drive.google.com/uc?export=view&id=14jfpzrDX-Yp9lM7h-T7xeOPkpoArWPWs", "https://drive.google.com/uc?export=view&id=13-LC4r8sl5QMr2lULAmIsYTPI3QFtey1", "https://drive.google.com/uc?export=view&id=1VpDZ3YwwcNUnS3PDUDDJ6F1I8JoaI-vb"] },
@@ -24,4 +28,5 @@ export const PAST_EVENTS: AcademicYearBlock[] = [
     { title: "Banh Mi Night", images: ["https://drive.google.com/uc?export=view&id=1m9XfbL3GQgYdDuYQSdENDaHJ6nxYlpJN"] },
     { title: "Lunar New Year", images: ["https://drive.google.com/uc?export=view&id=1ouSb1qah1T0MduezbBQtujs5bGXQKzjV"] },
   ]},
+
 ];

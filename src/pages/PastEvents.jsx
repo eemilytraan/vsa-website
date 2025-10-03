@@ -78,7 +78,7 @@ function SmartImage({ rawUrl, alt }) {
 export default function PastEventsPage() {
   return (
     <main className="container">
-      <h1 className="past-title">Past Events</h1>
+      <h1 className="past-title">Events</h1>
 
       {PAST_EVENTS.map((block) => {
         // Flatten: each image becomes its own polaroid
