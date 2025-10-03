@@ -84,6 +84,7 @@ export default function About() {
               <img
                 key={id}
                 src={src}
+                className="about-photo"
                 alt={`Board ${i}`}
                 onError={() => handleError(i)}
                 style={{
@@ -114,8 +115,8 @@ export default function About() {
               top: "50%",
               left: 10,
               transform: "translateY(-50%)",
-              background: "rgba(0,0,0,0.6)",
-              color: "#fff",
+              background: "rgba(35, 8, 8, 0.6)",
+              color: "#f0c36a",
               border: "none",
               borderRadius: "50%",
               width: 32,
@@ -133,8 +134,8 @@ export default function About() {
               top: "50%",
               right: 10,
               transform: "translateY(-50%)",
-              background: "rgba(0,0,0,0.6)",
-              color: "#fff",
+              background: "rgba(35, 8, 8, 0.6)",
+              color: "#f0c36a",
               border: "none",
               borderRadius: "50%",
               width: 32,
